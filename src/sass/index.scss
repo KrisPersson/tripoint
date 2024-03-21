@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html {
+background: #f0f0f0;
+}
+
+body {
+margin: 0;
+max-width: 1200px;
+margin-inline: auto;
+background: white;
+}
+
+.main {
+display: flex;
+flex-direction: column;
+gap: var(--main-gutter);
+}
+
+.container {
+--_p: var(--main-gutter);
+
+max-width: 1000px;
+padding-inline: var(--_p);
+margin-inline: auto;
+
+&--large {
+    --_p: calc(var(--main-gutter) * 2);
+}
+}
+
+.module {
+padding: 16px;
+background: red;
+
+&--ignore-gutter {
+    margin-inline: calc(var(--main-gutter) * -1);
+}
+}
+
+.hero {
+display: flex;
+align-items: flex-end;
+background-color: green;
+padding-block: 32px;
+min-height: 300px;
+
+&__content {
+    width: 100%;
+    background: yellow;
+}
+}

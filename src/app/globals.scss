@@ -1,0 +1,20 @@
+:root {
+  --main-gutter: 32px;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html {
+  background: #f0f0f0;
+}
+  
+body {
+margin: 0;
+max-width: 1200px;
+margin-inline: auto;
+background: white;
+}
