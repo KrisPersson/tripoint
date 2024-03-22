@@ -1,0 +1,44 @@
+@import "../sass/functions.scss";
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: pxToRem(208);
+    padding: var(--footer-v-padding) var(--footer-h-padding);
+    background: var(--c-primary-background);
+    display: flex;
+}
+
+.footerContent {
+    width: 87%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    margin: 4px 0;
+}
+
+.copyrightText {
+    font-size: pxToRem(14);
+    font-weight: 400;
+    color: var(--c-primary-caption);
+    margin: 0;
+}
+
+@media (min-width: 800px) {
+    .footer {
+        height: pxToRem(312);
+        justify-content: center;
+        align-items: flex-end;
+        padding: var(--footer-v-padding) 0;
+    }
+    .footerContent {
+        width: 87%;
+        max-width: 1600px;
+        row-gap: pxToRem(70);
+    }
+}
+    

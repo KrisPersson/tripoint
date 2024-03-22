@@ -1,40 +1,32 @@
+/* LAYOUT */
+@import "./sass/functions.scss";
+
+.html {
+  background: var(--c-primary-background);
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1600px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 .main {
-display: flex;
-flex-direction: column;
-gap: var(--main-gutter);
-}
-
-.container {
---_p: var(--main-gutter);
-
-max-width: 1000px;
-padding-inline: var(--_p);
-margin-inline: auto;
-
-&Large {
-    --_p: calc(var(--main-gutter) * 2);
-}
-}
-
-.module {
-padding: 16px;
-background: red;
-
-&IgnoreGutter {
-    margin-inline: calc(var(--main-gutter) * -1);
-}
-}
-
-.hero {
+  background: var(--c-white-default);
   display: flex;
-  align-items: flex-end;
-  background-color: green;
-  padding-block: 32px;
-  min-height: 300px;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: pxToRem(48) 0;
+  row-gap: pxToRem(48);
+}
 
-  &__content {
-      width: 100%;
-      background: yellow;
+@media (min-width: 800px) {
+  .main {
+    padding: pxToRem(80) 0;  
+    row-gap: pxToRem(80);
   }
 }
