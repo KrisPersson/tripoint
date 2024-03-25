@@ -3,30 +3,28 @@
 
 .html {
   background: var(--c-primary-background);
-  box-sizing: border-box;
 }
 
 .body {
   margin: 0 auto;
-  width: 100vw;
+  margin-top: 16px;
   max-width: 1600px;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .main {
   background: var(--c-white-default);
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: pxToRem(48) 0;
+  flex-direction: column;
   row-gap: pxToRem(48);
 }
 
+
+
 @media (min-width: 800px) {
+  .body {
+    margin-top: 0;
+  }
   .main {
-    padding: pxToRem(80) 0;  
     row-gap: pxToRem(80);
   }
 }

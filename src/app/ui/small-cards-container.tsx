@@ -7,7 +7,7 @@ import { products } from "../products";
 export default async function SmallCardsContainer() {
   return (
     <section aria-label="Product cards" className={styles.productSection}>
-      <div className={styles.container}>
+      <div className={`${styles.smallCardContainer} container`}>
         {products.map((product, i) => {
           return (
             <article aria-label="Product" key={i} className={styles.smallCard}>
@@ -20,7 +20,7 @@ export default async function SmallCardsContainer() {
                 />
               </div>
               <div className={styles.infoSection}>
-                <div className={styles.textContainer}>
+                <div className={styles.content}>
                   <div className={styles.typeTitle}>{product.type}</div>
                   <div className={styles.nameTitle}>{product.name}</div>
                   <Image

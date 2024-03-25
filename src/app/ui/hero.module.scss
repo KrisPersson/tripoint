@@ -1,31 +1,18 @@
 @import "../sass/functions.scss";
 .hero {
-    box-sizing: border-box;
-    min-width: pxToRem(375);
-    width: 100%;
-    max-width: 100%;
-    height: pxToRem(647);
-    margin: 0 auto;
-    padding-bottom: var(--hero-v-padding);
-    padding-left: var(--hero-h-padding);
+    min-height: pxToRem(647);
+    padding: var(--hero-v-padding) var(--hero-h-padding);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    align-items: flex-start;
     position: relative;
 
     &__content {
-        height: pxToRem(144);
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
         align-items: flex-start;
         position: relative;
-    }
-
-    &__textContainer {
-        width: fit-content;
-        height: auto;
+        gap: 16px;
     }
 }
 
@@ -42,16 +29,13 @@
 .productTitle {
     font-size: pxToRem(32);
     color: var(--c-white-default);
-    margin: 0;
     font-weight: 600;
     line-height: pxToRem(40);
-    white-space: nowrap;
 }
 
 .productSubTitle {
     font-size: pxToRem(32);
     color: var(--c-white-transparent-70);
-    margin: 0;
     font-weight: 600;
     line-height: pxToRem(40);
 }

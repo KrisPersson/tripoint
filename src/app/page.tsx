@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 import Header from "./ui/header";
 import Hero from "./ui/hero";
@@ -10,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
       <main className={styles.main}>
+        <Hero />
         <SmallCardsContainer />
         <BigCard />
       </main>
