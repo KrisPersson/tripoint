@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   row-gap: pxToRem(48);
+  padding-bottom: pxToRem(48);
 }
 
 
@@ -26,5 +27,7 @@
   }
   .main {
     row-gap: pxToRem(80);
+    padding-bottom: pxToRem(80);
+
   }
 }

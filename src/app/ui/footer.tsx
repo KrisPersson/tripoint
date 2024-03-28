@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerContent}>
+      <div className={`${styles.footerContent} container`}>
         <div>
           <Image
             className={styles.logo}

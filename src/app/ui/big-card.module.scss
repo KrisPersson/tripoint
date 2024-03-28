@@ -1,38 +1,44 @@
 @import "../sass/functions.scss";
+@import "../sass/mixins";
+
+.bigCardSection {
+    display: flex;
+    justify-content: center;
+    @include ignoreGutter;
+}
 
 .bigCard {
-    height: calc(pxToRem(224) + 100vw);
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    position: relative;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
 .imgSection {
-    width: 100vw;
-    min-height: 100vw;
+    min-height: pxToRem(379);
     position: relative;
 }
 
 .image {
-    object-position: top;
+    object-position: center;
     object-fit: cover;
 }
 
 .infoSection {
-    box-sizing: border-box;
-    height: pxToRem(224);
-    width: 100%;
-    padding-top: var(--card-big-v-padding);
-    padding-bottom: var(--card-big-v-padding);
-    padding-left: var(--card-big-h-padding);
+    padding-block: var(--card-big-v-padding);
+    padding-inline: var(--card-big-h-padding);
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     background: var(--c-primary-background);
-    position: relative;
+    row-gap: 16px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }
 
 .typeTitle {
@@ -52,30 +58,33 @@
 @media (min-width: 800px) {
 
     .bigCard {
-        flex-flow: row nowrap;
-        width: 87%;
+
+        flex-direction: row;
         justify-content: center;
-        height: calc(87vw / 2);
-        min-height: pxToRem(350);
-        max-height: pxToRem(704);
+        width: 100%;
+        // max-height: pxToRem(704);
+        // padding-inline: var(--main-gutter);
+        margin-inline: 0;
     }
 
     .infoSection {
+        box-sizing: border-box;
         justify-content: center;
         align-items: flex-start;
-        width: 50%;
-        max-width: 50%;
-        height: 100%;
-        padding-left: 9.33%;
+        flex: 1 1 100%;
+        min-width: 50%;
+
         row-gap: pxToRem(32);
     }
 
     .imgSection {
-        width: 50%;
-        height: 100%;
-        min-height: unset;
+        flex: 1 1 100%;
+        min-width: 50%;
+        height: pxToRem(704);
         background-position: right;
     }
+
+  
 
     .typeTitle {
         font-size: pxToRem(18);
@@ -88,12 +97,41 @@
     }
 }
 
+// @media (min-width: 470px) and (max-width: 649px) {
+//     .imgSection {
+//         min-height: pxToRem(470);
+//     }
+// }
+@media (min-width: 600px) and (max-width: 799px) {
+    .bigCard {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-inline: 0;
+
+    }
+    .imgSection {
+        width: 50%;
+    }
+    .infoSection {
+        width: 50%;
+        box-sizing: border-box;
+    }
+}
+
 @media (min-width: 800px) and (max-width: 1200px) {
     .infoSection {
-        padding-left: 8.13%;
     }
     .nameTitle {
         font-size: pxToRem(28);
         line-height: pxToRem(32);
+    }
+    .imgSection {
+        min-height: pxToRem(600);
+    }
+}
+
+@media (min-width: 1157px) {
+    .bigCardSection {
+        margin-inline: unset;
     }
 }

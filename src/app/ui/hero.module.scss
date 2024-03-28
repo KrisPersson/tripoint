@@ -55,12 +55,12 @@
 @media (min-width: 800px) {
 
     .hero {
-        height: pxToRem(832);
+        min-height: pxToRem(832);
         justify-content: center;
         padding-left: 13%;
 
         &__content {
-            height: pxToRem(232);
+            min-height: pxToRem(232);
         }
     }
 

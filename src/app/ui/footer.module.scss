@@ -2,23 +2,22 @@
 
 .footer {
     box-sizing: border-box;
-    width: 100%;
     min-height: pxToRem(208);
-    padding: var(--footer-v-padding) var(--footer-h-padding);
+    padding-block: var(--footer-v-padding);
     background: var(--c-primary-background);
     display: flex;
 }
 
 .footerContent {
-    width: 87%;
+    width: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .logo {
     display: block;
-    margin: 4px 0;
+    margin-block: 4px;
 }
 
 .copyrightText {
@@ -30,15 +29,14 @@
 
 @media (min-width: 800px) {
     .footer {
-        height: pxToRem(312);
+        min-height: pxToRem(312);
         justify-content: center;
         align-items: flex-end;
         padding: var(--footer-v-padding) 0;
     }
     .footerContent {
-        width: 87%;
-        max-width: 1600px;
         row-gap: pxToRem(70);
+
     }
 }
     

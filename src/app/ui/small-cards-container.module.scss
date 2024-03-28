@@ -9,6 +9,7 @@
 .smallCard {
     min-height: pxToRem(396);
     min-width: pxToRem(241);
+    flex: 1 1 100%;
     background: var(--c-primary-background);
     display: grid;
     grid-template-rows: 1fr auto;
@@ -27,17 +28,14 @@
 .infoSection {
     grid-row: 2 / -1;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     row-gap: 16px;
     padding: var(--card-small-padding); 
-
 }
 
 .content {
-    width: fit-content;
-    height: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: flex-start;
     row-gap: pxToRem(8);
 }
@@ -81,13 +79,11 @@
     }
 
     .container {
-        height: 100%;
         overflow-x: scroll;
     }
 
     .smallCard {
-        height: pxToRem(623);
-        width: pxToRem(448);
+        min-height: pxToRem(623);
         min-width: pxToRem(300);
     }
 
@@ -101,7 +97,6 @@
 
     .infoSection {
         justify-content: center;
-        height: 100%;
     }
 
     .textContainer {
