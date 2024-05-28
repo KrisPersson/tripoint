@@ -23,7 +23,7 @@
 
 /* Global variables */
 
---c-primary-background: var(--_palette-orange-700);
+--c-primary-background: var(--_palette-grayscale-100);
 --c-primary-caption: var(--_palette-grayscale-300);
 --c-primary-subtitle: var(--_palette-grayscale-500);
 --c-primary-title: var(--_palette-grayscale-700);
@@ -71,6 +71,7 @@
 --_mq-hero-h-padding-desktop: var(--scale-222);
 --_mq-hero-v-padding-mobile: var(--scale-40);
 --_mq-hero-v-padding-desktop: var(--scale-40);
+
 --_mq-header-h-padding-mobile: var(--scale-24);
 --_mq-header-h-padding-desktop: var(--scale-40);
 --_mq-header-v-padding-mobile: var(--scale-24);
